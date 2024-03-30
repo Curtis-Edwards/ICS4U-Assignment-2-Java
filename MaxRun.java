@@ -33,7 +33,7 @@ final class MaxRunFunction {
     *
     * @return maxRun The max run of the string
     */
-    public static String maxRunFunction(String userString) {
+    public static int maxRunFunction(String userString) {
         int maxRun = 1;
         int currentRun = 1;
 
