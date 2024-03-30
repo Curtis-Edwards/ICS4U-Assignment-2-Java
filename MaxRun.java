@@ -1,5 +1,5 @@
 /*
- * Given a string, returns the length 
+ * Given a string, returns the length
  * of the largest run in the string.
  *
  * @author  Curtis Edwards
@@ -56,23 +56,23 @@ final class MaxRun {
     * @param args No args will be used
     */
     public static void main(String[] args) {
-       // Input
-        Scanner scanner = new Scanner(System.in);
+        // Input
+        final Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a string: ");
-        String userString = scanner.nextLine().trim();
-        
+        final String userString = scanner.nextLine().trim();
+    
         // Error check
         if (userString.length() == 0) {
             System.out.println("Invalid input.");
         } else {
             // Process
-            int maxRun = maxRunFunction(userString);
-            
+            final int maxRun = maxRunFunction(userString);
+
             // Output
             System.out.print("The string \"" + userString);
             System.out.println("\" has a max run of " + maxRun + "!");
         }
-        
+
         System.out.println("\nDone.");
 
     }
