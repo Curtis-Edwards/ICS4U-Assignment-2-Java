@@ -12,7 +12,7 @@ import java.util.Scanner;
 /**
 * This is the standard "MaxRunFunction" program.
 */
-final class MaxRunFunction {
+final class MaxRun {
 
     /**
     * Prevent instantiation.
@@ -22,7 +22,7 @@ final class MaxRunFunction {
     * @throws IllegalStateException if this is ever called
     *
     */
-    private MaxRunFunction() {
+    private MaxRun() {
         throw new IllegalStateException("Cannot be instantiated");
     }
 
