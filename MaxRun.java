@@ -60,7 +60,7 @@ final class MaxRun {
         final Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a string: ");
         final String userString = scanner.nextLine().trim();
-    
+
         // Error check
         if (userString.length() == 0) {
             System.out.println("Invalid input.");
