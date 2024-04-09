@@ -26,7 +26,7 @@ final class Palindrome {
     }
 
     /**
-    * This function calculates if a string is a palindrome
+    * This function calculates if a string is a palindrome.
     *
     * @param userString The user's input.
     *
