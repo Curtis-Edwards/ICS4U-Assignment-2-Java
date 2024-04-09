@@ -67,7 +67,7 @@ final class Palindrome  {
             System.out.println("Invalid input.");
         } else {
             // Process
-            boolean isPalindrome = isPalindrome(userString);
+            boolean isPalindrome = palindrome(userString);
             // output
             if (isPalindrome) {
                 System.out.println(userString + " is a palindrome.");
