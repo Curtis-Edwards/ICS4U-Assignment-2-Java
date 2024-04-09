@@ -11,7 +11,7 @@ import java.util.Scanner;
 /**
 * This is the standard "MaxRunFunction" program.
 */
-final class Palindrome  {
+final class Palindrome {
 
     /**
     * Prevent instantiation.
@@ -21,7 +21,7 @@ final class Palindrome  {
     * @throws IllegalStateException if this is ever called
     *
     */
-    private Palindrome () {
+    private Palindrome() {
         throw new IllegalStateException("Cannot be instantiated");
     }
 
@@ -32,7 +32,7 @@ final class Palindrome  {
     *
     * @return maxRun The max run of the string
     */
-    public static boolean palindrome (String userString) {
+    public static boolean palindrome(String userString) {
         String reversedString = "";
         boolean isPalindrome;
         // reverse string
@@ -48,7 +48,6 @@ final class Palindrome  {
 
         return isPalindrome;
     }
-
 
     /**
     * The starting main() function.
@@ -67,7 +66,7 @@ final class Palindrome  {
             System.out.println("Invalid input.");
         } else {
             // Process
-            boolean isPalindrome = palindrome(userString);
+            final boolean isPalindrome = palindrome(userString);
             // output
             if (isPalindrome) {
                 System.out.println(userString + " is a palindrome.");
