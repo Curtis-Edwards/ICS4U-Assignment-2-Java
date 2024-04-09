@@ -34,7 +34,7 @@ final class Palindrome {
     */
     public static boolean palindrome(String userString) {
         String reversedString = "";
-        boolean isPalindrome;
+        final boolean isPalindrome;
         // reverse string
         for (int counter = userString.length() - 1; counter >= 0; counter--) {
             reversedString += userString.charAt(counter);
