@@ -1,10 +1,9 @@
 /*
- * Given a string, returns the length
- * of the largest run in the string.
+ * this is the Palindrome program
  *
  * @author  Curtis Edwards
  * @version 1.0
- * @since   2024-03-30
+ * @since   2024-04-09
  */
 
 import java.util.Scanner;
@@ -12,7 +11,7 @@ import java.util.Scanner;
 /**
 * This is the standard "MaxRunFunction" program.
 */
-final class MaxRun {
+final class Palindrome  {
 
     /**
     * Prevent instantiation.
@@ -22,7 +21,7 @@ final class MaxRun {
     * @throws IllegalStateException if this is ever called
     *
     */
-    private MaxRun() {
+    private Palindrome () {
         throw new IllegalStateException("Cannot be instantiated");
     }
 
@@ -33,22 +32,23 @@ final class MaxRun {
     *
     * @return maxRun The max run of the string
     */
-    public static int maxRunFunction(String userString) {
-        int maxRun = 1;
-        int currentRun = 1;
-
-        for (int i = 0; i < userString.length() - 1; i++) {
-            if (userString.charAt(i) == userString.charAt(i + 1)) {
-                currentRun++;
-                if (currentRun > maxRun) {
-                    maxRun = currentRun;
-                }
-            } else {
-                currentRun = 1;
-            }
+    public static int palindrome (String userString) {
+        String reversedString = "";
+        boolean isPalindrome;
+        // reverse string
+        for (int counter = userString.length() - 1; counter >= 0; counter--) {
+            reversedString += userString.charAt(counter);
         }
-        return maxRun;
+        // check if string is palindrome (capitalization doesn't matter)
+        if (userString.equalsIgnoreCase(reversedString.toString())) {
+            isPalindrome = true;
+        } else {
+            isPalindrome = false;
+        }
+
+        return isPalindrome;
     }
+
 
     /**
     * The starting main() function.
@@ -56,8 +56,9 @@ final class MaxRun {
     * @param args No args will be used
     */
     public static void main(String[] args) {
-        // Input
         final Scanner scanner = new Scanner(System.in);
+
+        // Input
         System.out.print("Enter a string: ");
         final String userString = scanner.nextLine().trim();
 
@@ -66,14 +67,15 @@ final class MaxRun {
             System.out.println("Invalid input.");
         } else {
             // Process
-            final int maxRun = maxRunFunction(userString);
-
-            // Output
-            System.out.print("The string \"" + userString);
-            System.out.println("\" has a max run of " + maxRun + "!");
+            boolean isPalindrome = isPalindrome(string);
+            // output
+            if (isPalindrome) {
+                System.out.println(userString + " is a palindrome.");
+            } else {
+                System.out.println(userString + " is NOT a palindrome.");
+            }
         }
 
         System.out.println("\nDone.");
-
     }
 }
