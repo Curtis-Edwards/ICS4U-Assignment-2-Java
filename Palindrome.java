@@ -26,11 +26,11 @@ final class Palindrome {
     }
 
     /**
-    * This function calculates the max run of a string.
+    * This function calculates if a string is a palindrome
     *
     * @param userString The user's input.
     *
-    * @return maxRun The max run of the string
+    * @return isPalindrome is the string a palindrome
     */
     public static boolean palindrome(String userString) {
         String reversedString = "";
