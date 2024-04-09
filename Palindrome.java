@@ -32,7 +32,7 @@ final class Palindrome  {
     *
     * @return maxRun The max run of the string
     */
-    public static int palindrome (String userString) {
+    public static boolean palindrome (String userString) {
         String reversedString = "";
         boolean isPalindrome;
         // reverse string
@@ -67,7 +67,7 @@ final class Palindrome  {
             System.out.println("Invalid input.");
         } else {
             // Process
-            boolean isPalindrome = isPalindrome(string);
+            boolean isPalindrome = isPalindrome(userString);
             // output
             if (isPalindrome) {
                 System.out.println(userString + " is a palindrome.");
