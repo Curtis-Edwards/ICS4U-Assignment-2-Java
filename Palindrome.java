@@ -9,7 +9,7 @@
 import java.util.Scanner;
 
 /**
-* This is the standard "MaxRunFunction" program.
+* This is the standard "Palindrome" program.
 */
 final class Palindrome {
 
